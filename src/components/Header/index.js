@@ -1,13 +1,13 @@
 import * as React from 'react'
 import PropTypes from "prop-types"
 import { HeadArea, Logo, HeadLink, Menu } from './HeaderElements'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery, Link } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 
 const Header = ({ siteTitle }) => {
   const dataLogo = useStaticQuery(graphql`
-    query MyQuery {
+    query HeaderLogo {
       file(relativePath: { eq: "logo-min.png" }) {
         childImageSharp {
           gatsbyImageData(width: 90)
@@ -22,7 +22,9 @@ const Header = ({ siteTitle }) => {
     <>
       <HeadArea>
         <Logo>
-          <GatsbyImage image={logo} alt="Logo"/>
+          <Link to="/">
+            <GatsbyImage image={logo} alt="Logo"/>
+          </Link>
         </Logo>
         <Menu>
           <HeadLink to="/" activeClassName="selected">

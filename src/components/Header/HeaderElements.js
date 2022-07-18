@@ -8,7 +8,7 @@ align-items: center;
 position: sticky;
 top: 0;
 background-color: #fff;
-color: #402825;
+color: #311210;
 font-weight: bold;
 z-index: 100;
 `
@@ -28,6 +28,7 @@ transition: .2s;
 }
 &.${props => props.activeClassName} {
     color: #79858B;
+    border-bottom: 2px solid #79858B;
   }
 `
 export const Menu = styled.div`

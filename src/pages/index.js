@@ -4,14 +4,13 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Slider from '../components/Home/Slider'
 
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <div>
-      <p>Hey! Esto es un texto de prueba</p>
-    </div>
+    <Slider></Slider>
   </Layout>
 )
 
