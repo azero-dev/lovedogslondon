@@ -10,6 +10,7 @@ top: 0;
 background-color: #fff;
 color: #311210;
 font-weight: bold;
+box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 z-index: 100;
 `
 
