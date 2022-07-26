@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage  } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import { Container, Box } from './MiniGalleryElements'
 
@@ -24,12 +24,11 @@ const MiniGallery = () => {
 
   return (
     <Container>
-      {pics.map(elem => {
+      {pics.map((elem, index) => {
         return (
-          <Link to="/gallery">
+          <Link to="/gallery" key={index}>
             <Box>
-              <GatsbyImage image={ elem.node.childImageSharp.gatsbyImageData } alt={ elem.node.id } />
-              {console.log(elem)}
+              <GatsbyImage image={ elem.node.childImageSharp.gatsbyImageData } alt="" />
             </Box>
           </Link>
         )

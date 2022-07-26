@@ -1,16 +1,15 @@
 import * as React from 'react'
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage  } from 'gatsby-plugin-image'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Link } from 'gatsby'
 import { Container, SafeBox, Box } from './MiniServicesElements'
 import Text from '../../Text/index'
 
 const MiniServices = () => {
-
   //Query images
   const services = useStaticQuery(graphql`
-    query GettingSergices {
-      allFile(filter: {relativeDirectory: {eq: "services"}}, sort: {order: DESC}) {
+    query Services {
+      allFile(filter: { relativeDirectory: { eq: "services" } }) {
         edges {
           node {
             childImageSharp {
@@ -26,21 +25,20 @@ const MiniServices = () => {
 
   return (
     <Container>
-      {/* <Text>
-        <h1>Services</h1>
-      </Text> */}
+      <Text>
+        <h1>Our services</h1>
+      </Text>
       <SafeBox>
-        {servicesPics.map(elem => {
+        {servicesPics.map((elem, index) => {
           return (
-            <Link to={"/services#" + elem.node.name}>
+            <Link to={"/services#" + elem.node.name} key={index}>
               <Box>
-                <GatsbyImage image={ elem.node.childImageSharp.gatsbyImageData } alt={ elem.node.id } />
-                {console.log(elem)}
-                <Text><h1>{elem.node.name}</h1></Text>
+                <GatsbyImage image={ elem.node.childImageSharp.gatsbyImageData } alt="" />
+                <Text><h2>{elem.node.name}</h2></Text>
               </Box>
             </Link>
           )
-        })}
+        }).reverse()}
       </SafeBox>
     </Container>
   )

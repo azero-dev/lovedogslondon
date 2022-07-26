@@ -1,11 +1,10 @@
 import * as React from 'react'
-import PropTypes from "prop-types"
 import { HeadArea, Logo, HeadLink, Menu } from './HeaderElements'
-import { graphql, useStaticQuery, Link } from 'gatsby'
-import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image'
+import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
 
 
-const Header = ({ siteTitle }) => {
+const Header = () => {
   return (
     <>
       <HeadArea>
@@ -40,14 +39,6 @@ const Header = ({ siteTitle }) => {
       </HeadArea>
     </>
   )
-}
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: `FacuSounds`,
 }
 
 export default Header

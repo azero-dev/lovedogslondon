@@ -22,18 +22,16 @@ export const Container = styled.div`
   }
 `
 
-export const Text = styled.div`
-  order: 1;
+export const TextBox = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   width: 35vw;
-  height: 35vh;
-  color: #fff;
+  /* color: #fff;
   font-weight: normal;
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.3em; */
   @media screen and (max-width: 1024px) {
     width: 88vw;
     font-size: 1.1em;
@@ -41,7 +39,6 @@ export const Text = styled.div`
 `
 
 export const Logo = styled.div`
-  order: 2;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;

@@ -1,7 +1,4 @@
 import * as React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
 import { useState, useEffect } from "react";
 
 import "./layout.css"
@@ -10,15 +7,6 @@ import { Main, Body } from './LayoutElemets'
 import Footer from "./Footer/index"
 
 const Layout = ({ children }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
 
   //Check scroll
   const [isShrunk, setShrunk] = useState(false)
@@ -48,15 +36,11 @@ const Layout = ({ children }) => {
 
   return (
     <Body inScroll={isShrunk}>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`}/>
+      <Header />
       <Main>{children}</Main>
       <Footer />
     </Body>
   )
-}
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
 }
 
 export default Layout
