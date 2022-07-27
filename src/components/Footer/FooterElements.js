@@ -3,11 +3,11 @@ import { Link } from 'gatsby'
 
 export const FooterArea = styled.footer`
   position: relative;
-  background: #402825;
+  background: #311210;
   width: 100%;
-  /* height: 10vh; */
   padding: 2vh 0;
   color: #fff;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
   z-index: 10;
 
   @media screen and (max-width: 992px) {

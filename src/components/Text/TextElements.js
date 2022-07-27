@@ -3,11 +3,10 @@ import styled from 'styled-components'
 export const NormalText = styled.div`
   color: #311210;
   color: ${props => props.dark ? "#fff" : "#311210"};
-  text-align: center;
+  text-align: ${props => props.align ? props.align : "center"};
   font-size: 1.1em;
   font-weight: normal;
   @media screen and (max-width: 1024px) {
-    /* width: 70vw; */
   }
   & h1 {
     margin-bottom: 1em;

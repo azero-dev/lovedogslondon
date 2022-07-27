@@ -28,8 +28,8 @@ transition: .2s;
   color: #79858B;
 }
 &.${props => props.activeClassName} {
-    color: #79858B;
-    border-bottom: 2px solid #79858B;
+    color: #311210;
+    border-bottom: 2px solid #d82329;
   }
 `
 export const Menu = styled.div`

@@ -5,18 +5,15 @@ export const Container = styled.div`
   flex-flow: column wrap;
   justify-content: center;
   align-items: center;
-  gap: 8%;
-  position: relative;
   width: 100%;
-  /* height: 50vh; */
-  margin: 0;
-  padding: 10vh 4vw;
+  padding: 10vh 16em;
   background-color: #fff;
   @media screen and (max-width: 1024px) {
-    min-height: 78vh;
+    padding: 10vh 4em;
   }
   @media screen and (max-width: 1024px) and (orientation: landscape) {
     min-height: 78vw;
+    padding: 10vh 4em;
   }
 `
 

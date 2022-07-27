@@ -1,9 +1,9 @@
 import * as React from 'react'
 import { NormalText } from './TextElements'
 
-const Text = ({ children, dark }) => {
+const Text = ({ children, dark, align }) => {
   return (
-      <NormalText dark={dark}>{ children }</NormalText>
+      <NormalText dark={dark} align={align}>{ children }</NormalText>
   )
 }
 

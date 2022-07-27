@@ -32,7 +32,7 @@ const Header = () => {
           <HeadLink to="/about" activeClassName="selected">
             About us
           </HeadLink>
-          <HeadLink to="/contact" activeClassName="selected">
+          <HeadLink to="/#Contact" activeClassName="selected">
             Contact us
           </HeadLink>
         </Menu>

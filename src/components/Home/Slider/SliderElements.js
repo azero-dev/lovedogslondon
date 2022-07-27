@@ -43,7 +43,7 @@ export const Logo = styled.div`
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  width: 14vw;
+  width: 15vw;
   @media screen and (max-width: 1024px) {
     width: 50vw;
   }
