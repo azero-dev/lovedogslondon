@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { Container } from './ContactFormElements'
-import Text from '../../../Text/index'
 
 const ContactForm = () => {
   return (

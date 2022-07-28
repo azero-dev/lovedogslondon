@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Main = styled.div`
-background-color: brown;
+background-color: #311210;
 `
 
 export const Body = styled.div`

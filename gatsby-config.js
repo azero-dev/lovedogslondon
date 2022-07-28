@@ -36,6 +36,14 @@ module.exports = {
         path: `${__dirname}/src/images/SocialMedia`,
       },
     },
+    
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `Gallery`,
+        path: `${__dirname}/src/images/gallery`,
+      },
+    },
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
