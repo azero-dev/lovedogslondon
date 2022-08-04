@@ -32,19 +32,31 @@ export const Container = styled.div`
 
 export const Box = styled.div`
   align-self: center;
-  max-width: ${props => (props.children.props.image.width > props.children.props.image.height) ? "50%" : "none"};
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 100px 20px rgba(0, 0, 0, 0.6);
   @media screen and (max-width: 1024px) {
-    /* max-width: 95%; */
+    box-shadow: none;
   }
-  @media screen and (max-width: 1024px) and (orientation: landscape) {
-    /* max-width: 50%; */
-  }
-  & .imgViewer {
-    max-width: ${props => (props.children.props.image.height > props.children.props.image.width) ? "25%" : "none"};
+  & .gatsby-image-wrapper img {
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 95vh;
+    width: auto;
     margin: 0 auto;
     transform: ${props => {
       const zoomed = props.children.props.scale
-      return `scale(${zoomed}, ${zoomed})`
+      const xPos = props.children.props.xPos
+      const yPos = props.children.props.yPos
+      if (props.children.props.scale === 1) {
+        return null
+      } else {
+        return `scale(${zoomed}, ${zoomed}) translate(${xPos}px, ${yPos}px)`
+      }
     }};
+    @media screen and (max-width: 1024px) {
+      height: auto;
+      max-width: 95vw;
+    }
   }
 `
