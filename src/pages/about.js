@@ -2,13 +2,15 @@ import React from 'react'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
+import Slider from '../components/About/Slider'
+import AboutText from '../components/About/AboutText'
+
 const About = () => {
   return (
     <Layout>
       <Seo title="About" />
-      <div style={{ height: "200vh" }}>
-        <p>Hey! Esto es un texto de prueba</p>
-      </div>
+      <Slider />
+      <AboutText />
     </Layout>
   )
 }

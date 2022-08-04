@@ -13,17 +13,15 @@ const GalleryComp = () => {
   const GalleryPictures = useStaticQuery(graphql`
     query GettingImgGallery {
       allFile(filter: {relativeDirectory: {eq: "gallery"}}) {
-        edges {
-          node {
-            childImageSharp {
-              gatsbyImageData(aspectRatio: 1)
-            }
+        nodes {
+          childImageSharp {
+            gatsbyImageData
           }
         }
       }
     }
   `)
-  const pics = GalleryPictures.allFile.edges
+  const pics = GalleryPictures.allFile.nodes
 
   //Viewer toggler
   const [viewerActive, setViewerActive] = useState(false)
@@ -42,10 +40,10 @@ const GalleryComp = () => {
       document.body.style.top = `-${position}px`
       window.scroll(0, position)
     } else {
-      const position = window.scrollY
-      document.body.style.position = ''
-      document.body.style.top = ''
-      window.scroll(0, position)
+      const scrollY = document.body.style.top;
+      document.body.style.position = '';
+      document.body.style.top = '';
+      window.scrollTo(0, parseInt(scrollY || '0') * -1);
     }
   })
 
@@ -53,13 +51,16 @@ const GalleryComp = () => {
     <Wrapper>
       <Text>
         <h1>Gallery</h1>
+        <p>When in our care, dogs have free time together and are able to socialise, sleep and play in a safe and clean environment. <br/> All dog walks take place in one of the local parks and are a minimum of one hour. We have NO KENNELS, NO CAGES AND NO EXTERNAL ARRANGEMENTS.</p>
+        <br></br>
+        <br></br>
       </Text>
       <Container>
       {pics.map((elem, index) => {
-        const picture = elem.node.childImageSharp.gatsbyImageData
+        const picture = elem.childImageSharp.gatsbyImageData
         return (
             <Box onClick={() => {viewerToggler(); setSendpicture(picture)}} key={index}>
-              <GatsbyImage image={ picture } alt="" />
+              <GatsbyImage image={ picture } alt="" className="img-wrap" imgClassName="img-box" />
             </Box>
         )
       })}

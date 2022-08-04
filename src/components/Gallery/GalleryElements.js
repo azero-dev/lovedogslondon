@@ -28,8 +28,10 @@ export const Container = styled.div`
 `
 
 export const Box = styled.div`
-align-self: center;
+  align-self: center;
   width: 18vw;
+  height: 18vw;
+  overflow: hidden;
   transition: .3s;
   cursor: pointer;
   @media screen and (max-width: 1024px) {
@@ -38,5 +40,17 @@ align-self: center;
   }
   &:hover {
     transform: scale(1.02);
+  }
+  & .img-wrap {
+    width: 18vw;
+    height: 18vw;
+  }
+  & .img-box {
+  }
+  @media screen and (max-width: 1024px) {
+    & .img-wrap {
+      width: 40vw;
+      height: 40vw;
+    }
   }
 `
