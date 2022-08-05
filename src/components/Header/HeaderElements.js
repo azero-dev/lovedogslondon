@@ -19,19 +19,7 @@ position: relative;
 left: 6vw;
 order: 1;
 `
-export const HeadLink = styled(Link)`
-color: #402825;
-text-decoration: none;
-margin-right: 20px;
-transition: .2s;
-&:hover {
-  color: #79858B;
-}
-&.${props => props.activeClassName} {
-    color: #311210;
-    border-bottom: 2px solid #d82329;
-  }
-`
+
 export const Menu = styled.div`
 position: relative;
 right: 2vw;

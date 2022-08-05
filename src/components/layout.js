@@ -1,10 +1,13 @@
 import * as React from "react"
-import { useState, useEffect } from "react";
+import { useState, useEffect, createContext } from "react";
 
 import "./layout.css"
 import Header from "./Header/index"
 import { Main, Body } from './LayoutElemets'
 import Footer from "./Footer/index"
+
+// Create Context
+export const MyContext = createContext()
 
 const Layout = ({ children }) => {
 
@@ -35,11 +38,13 @@ const Layout = ({ children }) => {
   }, [])
 
   return (
-    <Body inScroll={isShrunk}>
-      <Header />
-      <Main>{children}</Main>
-      <Footer />
-    </Body>
+    <MyContext.Provider value={isShrunk}>
+      <Body inScroll={isShrunk}>
+        <Header />
+        <Main>{children}</Main>
+        <Footer />
+      </Body>
+    </MyContext.Provider>
   )
 }
 

@@ -42,9 +42,9 @@ const Contact = () => {
         </Text>
         {icons.map((elem, index) => {
           return (
-            <Link to={elem.node.name === 'facebook' ? 'https://www.facebook.com/lovedogslondon' : 'https://instagram.com/lovedogslondonltd'} key={index}>
+            <a href={elem.node.name === 'facebook' ? 'https://www.facebook.com/lovedogslondon' : 'https://instagram.com/lovedogslondonltd'} key={index}>
               <GatsbyImage image={elem.node.childImageSharp.gatsbyImageData} alt="" />
-            </Link>
+            </a>
           )
         })}
       </ContactDetails>

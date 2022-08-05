@@ -9,8 +9,9 @@ const About = () => {
   return (
     <Layout>
       <Seo title="About" />
+      <AboutText part={"first"} />
       <Slider />
-      <AboutText />
+      <AboutText part={"second"} />
     </Layout>
   )
 }

@@ -1,10 +1,24 @@
 import * as React from 'react'
-import { HeadArea, Logo, HeadLink, Menu } from './HeaderElements'
+import { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 
+import { HeadArea, Logo, Menu } from './HeaderElements'
+import Normal from './Normal/index'
+import Responsive from './Responsive/index'
+
 
 const Header = () => {
+
+  //Handling resizing
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const breakPoint = 1024;
+  useEffect(() => {
+    const handleWinResize = () => {setWindowWidth(window.innerWidth)}
+    window.addEventListener("resize", handleWinResize)
+    return() => window.removeEventListener("resize", handleWinResize)
+  }, [])
+
   return (
     <>
       <HeadArea>
@@ -20,21 +34,7 @@ const Header = () => {
           </Link>
         </Logo>
         <Menu>
-          <HeadLink to="/" activeClassName="selected">
-            Home
-          </HeadLink>
-          <HeadLink to="/services" activeClassName="selected">
-            Services
-          </HeadLink>
-          <HeadLink to="/gallery" activeClassName="selected">
-            Gallery
-          </HeadLink>
-          <HeadLink to="/about" activeClassName="selected">
-            About us
-          </HeadLink>
-          <HeadLink to="/#Contact" activeClassName="selected">
-            Contact us
-          </HeadLink>
+          {windowWidth > breakPoint ? <Normal /> : <Responsive />}
         </Menu>
       </HeadArea>
     </>

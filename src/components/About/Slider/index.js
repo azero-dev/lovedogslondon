@@ -7,7 +7,7 @@ const Slider = () => {
 
   const getSliderPic = useStaticQuery(graphql`
     query GettingImgSlider {
-      file(relativeDirectory: {eq: "gallery"}, name: {eq: "Annecto-2"}) {
+      file(relativeDirectory: {eq: "gallery"}, name: {eq: "15"}) {
         childImageSharp {
           gatsbyImageData
         }
@@ -18,7 +18,7 @@ const Slider = () => {
   
   return (
     <Container>
-      <GatsbyImage image={sliderPic} objectPosition="0 84%" className="imgwrpfx" imgClassName="imgfx" alt="Vekison running with the dogs" />
+      <GatsbyImage image={sliderPic} objectPosition="0 84%" className="imgwrpfx" alt="Vekison running with the dogs" />
     </Container>
   )
 }
