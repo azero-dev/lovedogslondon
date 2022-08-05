@@ -1,8 +1,8 @@
 import * as React from 'react'
+import { useState, useEffect } from 'react';
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { Wrapper, Container, Box } from './ViewerElements'
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { Wrapper, Container, Box, InfoText } from './ViewerElements'
+import Text from '../../Text/index'
 
 const Viewer = ({picture}) => {
 
@@ -43,6 +43,11 @@ const Viewer = ({picture}) => {
         <Box>
           <GatsbyImage image={picture} objectFit="contain" scale={scale} xPos={xImgPosit} yPos={yImgPosit} alt="" />
         </Box>
+        <InfoText>
+            <Text dark={"true"} align="right">
+              <p>Scroll to zoom<br/>Click to exit</p>
+            </Text>
+          </InfoText>
       </Container>
     </Wrapper>
   )

@@ -60,3 +60,11 @@ export const Box = styled.div`
     }
   }
 `
+
+export const InfoText = styled.div`
+  display: block;
+  position: fixed;
+  top: 5px;
+  right: 10px;
+  z-index: 201;
+`

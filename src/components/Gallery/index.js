@@ -1,12 +1,11 @@
 import * as React from 'react'
+import { useEffect, useState } from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { useState } from 'react'
-import { Link } from 'gatsby'
-import { Wrapper, Container, Box } from './GalleryElements'
+
+import { Wrapper, Container, TextContainer, Box } from './GalleryElements'
 import Text from '../Text/index'
 import Viewer from './Viewer/index'
-import { useEffect } from 'react'
 
 const GalleryComp = () => {
   //Query images
@@ -49,12 +48,14 @@ const GalleryComp = () => {
 
   return (
     <Wrapper>
+    <TextContainer>
       <Text>
         <h1>Gallery</h1>
         <p>When in our care, dogs have free time together and are able to socialise, sleep and play in a safe and clean environment. <br/> All dog walks take place in one of the local parks and are a minimum of one hour. We have NO KENNELS, NO CAGES AND NO EXTERNAL ARRANGEMENTS.</p>
         <br></br>
         <br></br>
       </Text>
+    </TextContainer>
       <Container>
       {pics.map((elem, index) => {
         const picture = elem.childImageSharp.gatsbyImageData

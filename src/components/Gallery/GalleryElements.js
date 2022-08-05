@@ -27,6 +27,13 @@ export const Container = styled.div`
   }
 `
 
+export const TextContainer = styled.div`
+  padding: 0 16em;
+  @media screen and (max-width: 1024px) {
+    padding: 0 4em;
+  }
+`
+
 export const Box = styled.div`
   align-self: center;
   width: 18vw;
