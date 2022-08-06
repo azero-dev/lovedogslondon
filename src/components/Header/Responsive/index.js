@@ -13,12 +13,12 @@ const Responsive = children => {
     query GettingBurger {
       burgerClose: file(name: {eq: "burgerClose"}) {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(placeholder: TRACED_SVG)
         }
       }
       burgerOpen: file(name: {eq: "burgerOpen"}) {
         childImageSharp {
-          gatsbyImageData
+          gatsbyImageData(placeholder: TRACED_SVG)
         }
       }
     }

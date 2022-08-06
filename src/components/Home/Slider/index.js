@@ -1,9 +1,24 @@
 import * as React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
+import { graphql, useStaticQuery } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 import { Container, TextBox, Logo } from './SliderElements'
 import Text from '../../Text/index'
 
 const Slider = () => {
+
+  //Query images
+  const sliderLogo = useStaticQuery(graphql`
+    query gettingSliderLogo {
+      file(name: {eq: "logo"}) {
+        childImageSharp {
+          gatsbyImageData(placeholder: NONE)
+        }
+      }
+    }
+  `)
+  const pic = sliderLogo.file.childImageSharp.gatsbyImageData
+
+
   return (
     <Container>
       <TextBox>
@@ -12,7 +27,7 @@ const Slider = () => {
         </Text>
       </TextBox>
       <Logo>
-        <StaticImage src="../../../images/logo.png" alt="Logo" placeholder='tracedSVG' />
+        <GatsbyImage image={pic} alt="Logo" />
       </Logo>
     </Container>
   )

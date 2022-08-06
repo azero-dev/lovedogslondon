@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react'
 import { useStaticQuery, graphql } from "gatsby"
 import { GatsbyImage } from 'gatsby-plugin-image'
 
-import { Wrapper, Container, TextContainer, Box } from './GalleryElements'
+import { WrapperD, Container, Box } from './GalleryElements'
+import Wrapper from '../Wrapper/index'
 import Text from '../Text/index'
 import Viewer from './Viewer/index'
 
@@ -47,15 +48,15 @@ const GalleryComp = () => {
   })
 
   return (
+    <WrapperD>
     <Wrapper>
-    <TextContainer>
       <Text>
         <h1>Gallery</h1>
         <p>When in our care, dogs have free time together and are able to socialise, sleep and play in a safe and clean environment. <br/> All dog walks take place in one of the local parks and are a minimum of one hour. We have NO KENNELS, NO CAGES AND NO EXTERNAL ARRANGEMENTS.</p>
         <br></br>
         <br></br>
       </Text>
-    </TextContainer>
+    </Wrapper>
       <Container>
       {pics.map((elem, index) => {
         const picture = elem.childImageSharp.gatsbyImageData
@@ -67,7 +68,7 @@ const GalleryComp = () => {
       })}
     </Container>
     {viewerActive ? <div onClick={viewerToggler}><Viewer picture={ sendpicture } /></div> : null}
-    </Wrapper>
+    </WrapperD>
   )
 }
 

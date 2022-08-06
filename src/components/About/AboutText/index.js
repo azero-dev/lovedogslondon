@@ -1,10 +1,11 @@
 import * as React from 'react'
-import { Container, Highlight } from './AboutElements'
+import { Highlight } from './AboutElements'
 import Text from '../../Text/index'
+import Wrapper from '../../Wrapper/index'
 
 const AboutText = elem => {
   return (
-    <Container>
+    <Wrapper>
       { elem.part === "first" ? 
         <>
           <Text align="center">
@@ -30,7 +31,7 @@ const AboutText = elem => {
           </Highlight>
         </>
       }
-    </Container>
+    </Wrapper>
   )
 }
 

@@ -13,7 +13,7 @@ const MiniServices = () => {
         edges {
           node {
             childImageSharp {
-              gatsbyImageData(aspectRatio: 1, placeholder: BLURRED)
+              gatsbyImageData(aspectRatio: 1, placeholder: TRACED_SVG)
             }
             name
           }

@@ -36,7 +36,9 @@ export const Box = styled.div`
   box-shadow: 0 0 100px 20px rgba(0, 0, 0, 0.6);
   @media screen and (max-width: 1024px) {
     box-shadow: none;
+    background-color: transparent;
   }
+  
   & .gatsby-image-wrapper img {
     display: block;
     position: absolute;

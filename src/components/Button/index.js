@@ -1,13 +1,34 @@
 import React from 'react'
+import { Link } from 'gatsby'
 
-import { Box } from './ButtonElements'
+import { ButtonWrap, Box } from './ButtonElements'
 
 const Button = ( props ) => {
   return (
     <>
-      <Box onClick={props.click} primary={props.primary}>{props.name}</Box>
+      <ButtonWrap align={props.align}>
+        {props.link ?
+        <Link to={props.to}>
+          <Box secondary={props.secondary}>
+            {props.name}
+          </Box>
+        </Link>
+        :
+        <a href={props.to}>
+          <Box secondary={props.secondary}>
+            {props.name}
+          </Box>
+        </a>
+        }
+      </ButtonWrap>
     </>
   )
 }
 
 export default Button
+
+// to = address to follow
+// name = text inside button
+// link = normal button or Link -> default: normal button
+// align = align button -> default: 'center'
+// secondary = secondary css -> default: primary

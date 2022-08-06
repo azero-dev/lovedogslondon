@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const WrapperD = styled.div`
   background-color: #fff;
   padding: 2.5% 0;
   @media screen and (max-width: 1024px) {

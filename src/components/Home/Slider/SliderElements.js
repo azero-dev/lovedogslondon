@@ -28,10 +28,6 @@ export const TextBox = styled.div`
   justify-content: center;
   align-items: center;
   width: 35vw;
-  /* color: #fff;
-  font-weight: normal;
-  text-align: center;
-  font-size: 1.3em; */
   @media screen and (max-width: 1024px) {
     width: 88vw;
     font-size: 1.1em;

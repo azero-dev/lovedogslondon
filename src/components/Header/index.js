@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { useEffect, useState } from 'react'
-import { Link } from 'gatsby'
-import { StaticImage } from 'gatsby-plugin-image'
+import { graphql, Link, useStaticQuery } from 'gatsby'
+import { GatsbyImage } from 'gatsby-plugin-image'
 
 import { HeadArea, Logo, Menu } from './HeaderElements'
 import Normal from './Normal/index'
@@ -9,6 +9,18 @@ import Responsive from './Responsive/index'
 
 
 const Header = () => {
+  //Getting Logo
+  const getLogo = useStaticQuery(graphql`
+    query GettingLogo {
+      file(name: {eq: "logo-min"}) {
+        childImageSharp {
+          gatsbyImageData(placeholder: NONE, width: 90)
+        }
+      }
+    }
+  `)
+  const logo = getLogo.file.childImageSharp.gatsbyImageData
+
 
   //Handling resizing
   const [windowWidth, setWindowWidth] = useState(window.innerWidth)
@@ -24,13 +36,7 @@ const Header = () => {
       <HeadArea>
         <Logo>
           <Link to="/">
-            <StaticImage
-              src="../../images/logo-min.png"
-              width={90}
-              alt="Logo"
-              placeholder='tracedSVG'
-              loading='eager'
-            />
+            <GatsbyImage image={logo} alt="Logo" />
           </Link>
         </Logo>
         <Menu>

@@ -1,14 +1,13 @@
 import React from 'react'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import ServicesComponent from '../components/ServicesComponent/index'
 
 export default function Services() {
   return (
     <Layout>
       <Seo title="Services" />
-      <div style={{ height: "200vh" }}>
-        <p>Hey! Esto es un texto de prueba</p>
-      </div>
+      <ServicesComponent />
     </Layout>
   )
 }
