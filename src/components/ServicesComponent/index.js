@@ -1,21 +1,21 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { ServWrap, ServImg, ServText } from "./ServicesComponentElements"
 import Text from "../Text/index"
 import Wrapper from "../Wrapper/index"
+import ServItem from './ServItem/index'
 
 const ServicesComponent = () => {
   //Query images
   const servicesImg = useStaticQuery(graphql`
     query GettingServImg {
       walk: file(
-        name: { eq: "Walking" }
+        name: { eq: "Walks" }
         relativeDirectory: { eq: "services" }
       ) {
         childImageSharp {
           gatsbyImageData(placeholder: NONE)
         }
+        name
       }
       daycare: file(
         name: { eq: "Daycare" }
@@ -24,6 +24,7 @@ const ServicesComponent = () => {
         childImageSharp {
           gatsbyImageData(placeholder: NONE)
         }
+        name
       }
       boarding: file(
         name: { eq: "Boarding" }
@@ -32,10 +33,12 @@ const ServicesComponent = () => {
         childImageSharp {
           gatsbyImageData(placeholder: NONE)
         }
+        name
       }
     }
   `)
-  const servicesPics = servicesImg.walk.childImageSharp.gatsbyImageData
+
+  const ourServices = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis turpis eget turpis tristique, at tempus lorem facilisis. Aliquam ornare sollicitudin mauris, vitae commodo purus euismod eu. Vestibulum tincidunt sagittis risus. Donec sed condimentum sapien. Donec dignissim nisi vitae semper scelerisque. Nulla suscipit justo eget pretium rhoncus. Cras molestie consectetur justo, sit amet vehicula augue sagittis id. Nam viverra sapien vel turpis molestie posuere."
 
   return (
     <>
@@ -44,38 +47,12 @@ const ServicesComponent = () => {
           <h1>This are our services</h1>
         </Text>
         <Text align="justify">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-            finibus enim id justo ultrices egestas. Proin risus mi, tempor non
-            semper vel, tempor ac purus. Etiam malesuada nulla ultricies tortor
-            vehicula aliquam. Pellentesque eleifend augue at risus scelerisque,
-            id condimentum nulla scelerisque. Suspendisse scelerisque, mauris in
-            pharetra gravida, tortor massa feugiat ex, sit amet malesuada ligula
-            ante quis mauris. Nam facilisis vulputate gravida.{" "}
-          </p>
+          <p>{ ourServices }</p>
         </Text>
       </Wrapper>
-      <Wrapper>
-        <ServWrap distribution="left">
-          <ServImg>
-            <GatsbyImage image={servicesPics} alt="walk logo" />
-          </ServImg>
-          <ServText>
-            <Text>
-              <h1>Text</h1>
-            </Text>
-            <Text align="justify">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                finibus enim id justo ultrices egestas. Proin risus mi, tempor
-                non semper vel, tempor ac purus. Etiam malesuada nulla ultricies
-                tortor vehicula aliquam. Pellentesque eleifend augue at risus
-                scelerisque, id condimentum nulla scelerisque.
-              </p>
-            </Text>
-          </ServText>
-        </ServWrap>
-      </Wrapper>
+      { Object.values(servicesImg).map(elem => {
+        return (<ServItem items={elem} />)
+      }) }
     </>
   )
 }
