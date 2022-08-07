@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const ButtonWrap = styled.div`
   width: 100%;
+  display: ${props => props.display ? props.display : 'block'} ;
   text-align: ${props => {
     const align = props.align
     if (align === 'left') {

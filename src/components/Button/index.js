@@ -6,7 +6,7 @@ import { ButtonWrap, Box } from './ButtonElements'
 const Button = ( props ) => {
   return (
     <>
-      <ButtonWrap align={props.align}>
+      <ButtonWrap align={props.align} display={props.display} >
         {props.link ?
         <Link to={props.to}>
           <Box secondary={props.secondary}>
@@ -31,4 +31,5 @@ export default Button
 // name = text inside button
 // link = normal button or Link -> default: normal button
 // align = align button -> default: 'center'
+// display = outer wrapper display -> default: block
 // secondary = secondary css -> default: primary

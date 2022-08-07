@@ -1,31 +1,21 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 
 export const FooterArea = styled.footer`
   position: relative;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
   background: #311210;
   width: 100%;
-  padding: 2vh 0;
-  color: #fff;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
-  z-index: 10;
-
-  @media screen and (max-width: 992px) {
-    /* height: 10vh; */
-  }
+  padding: 4vh;
 `
 
-export const FooterDiv = styled.div`
-  padding: 0 4vw;
-
+export const Logo = styled.div`
+  width: 10vw;
+  height: 10vw;
   @media screen and (max-width: 992px) {
-    font-size: .8em;
-    padding: 0 2vw;
-    line-height: 1.2em;
+    width: 14em;
+    height: auto;
   }
-`
-export const FooterLink = styled(Link)`
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
 `
