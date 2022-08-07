@@ -4,7 +4,6 @@ export const ButtonWrap = styled.div`
   width: 100%;
   text-align: ${props => {
     const align = props.align
-    console.log(props)
     if (align === 'left') {
       return 'left'
     } else if (align === 'right') {

@@ -24,7 +24,6 @@ const ServItem = (elem) => {
   }
 
   return (
-    <>
       <Wrapper>
         <ServWrap distribution={name === 'Daycare' ? false : 'left'}>
           <ServImg>
@@ -40,7 +39,6 @@ const ServItem = (elem) => {
           </ServText>
         </ServWrap>
       </Wrapper>
-    </>
   )
 }
 

@@ -50,8 +50,8 @@ const ServicesComponent = () => {
           <p>{ ourServices }</p>
         </Text>
       </Wrapper>
-      { Object.values(servicesImg).map(elem => {
-        return (<ServItem items={elem} />)
+      { Object.values(servicesImg).map((elem, index) => {
+        return (<ServItem items={elem} key={index} />)
       }) }
     </>
   )
