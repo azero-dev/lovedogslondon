@@ -28,4 +28,14 @@ export const ContactDetails = styled.div`
     width: 90%;
     margin: 2em 1em 0;
   }
+  & button {
+    color: #fff;
+    font-size: 1.1em;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 3px solid #d82329;
+    border-radius: 3px;
+    cursor: pointer;
+  }
 `

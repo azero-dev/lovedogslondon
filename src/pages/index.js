@@ -11,7 +11,7 @@ import Contact from '../components/Home/Contact'
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="Lovedogs London" />
     <Slider />
     <MiniServices />
     <MiniGallery />

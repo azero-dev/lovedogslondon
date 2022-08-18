@@ -5,12 +5,12 @@ export const Container = styled.div`
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  gap: 8%;
+  gap: 0;
   position: relative;
   width: 100%;
   height: 50vh;
   margin: 0;
-  padding: 4vh 4vw;
+  /* padding: 4vh 4vw; */
   background-color: #311210;
   @media screen and (max-width: 1024px) {
     flex-flow: column nowrap;
@@ -27,7 +27,8 @@ export const TextBox = styled.div`
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  width: 35vw;
+  width: 26vw;
+  font-style: italic;
   @media screen and (max-width: 1024px) {
     width: 88vw;
     font-size: 1.1em;
@@ -39,8 +40,8 @@ export const Logo = styled.div`
   flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  width: 15vw;
+  width: 20vw;
   @media screen and (max-width: 1024px) {
-    width: 50vw;
+    width: 80vw;
   }
 `

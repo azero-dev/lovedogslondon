@@ -23,9 +23,10 @@ const Header = () => {
 
 
   //Handling resizing
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
+  const [windowWidth, setWindowWidth] = useState(0)
   const breakPoint = 1024;
   useEffect(() => {
+    setWindowWidth(window.innerWidth)
     const handleWinResize = () => {setWindowWidth(window.innerWidth)}
     window.addEventListener("resize", handleWinResize)
     return() => window.removeEventListener("resize", handleWinResize)

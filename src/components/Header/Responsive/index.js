@@ -42,19 +42,19 @@ const Responsive = children => {
           {isBurgerClose ? <GatsbyImage image={burgerClose} alt="burger"/> : <GatsbyImage image={burgerOpen} alt="burger"/>}
         </Burger>
         <Content close={isBurgerClose} shrink={shrink} >
-          <HeadLink to="/" activeClassName="selected">
+          <HeadLink onClick={handleClick} to="/" activeClassName="selected">
             Home
           </HeadLink>
-          <HeadLink to="/services" activeClassName="selected">
+          <HeadLink onClick={handleClick} to="/services" activeClassName="selected">
             Services
           </HeadLink>
-          <HeadLink to="/gallery" activeClassName="selected">
+          <HeadLink onClick={handleClick} to="/gallery" activeClassName="selected">
             Gallery
           </HeadLink>
-          <HeadLink to="/about" activeClassName="selected">
+          <HeadLink onClick={handleClick} to="/about" activeClassName="selected">
             About us
           </HeadLink>
-          <HeadLink to="/#Contact" activeClassName="selected">
+          <HeadLink onClick={handleClick} to="/#Contact" activeClassName="selected">
             Contact us
           </HeadLink>
         </Content>

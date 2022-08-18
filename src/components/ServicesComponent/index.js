@@ -38,13 +38,13 @@ const ServicesComponent = () => {
     }
   `)
 
-  const ourServices = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent venenatis turpis eget turpis tristique, at tempus lorem facilisis. Aliquam ornare sollicitudin mauris, vitae commodo purus euismod eu. Vestibulum tincidunt sagittis risus. Donec sed condimentum sapien. Donec dignissim nisi vitae semper scelerisque. Nulla suscipit justo eget pretium rhoncus. Cras molestie consectetur justo, sit amet vehicula augue sagittis id. Nam viverra sapien vel turpis molestie posuere."
+  const ourServices = "Our aim is to make sure all dogs needs are met for their healthy physical and psychological growth. Socialising is a very important part of everyday dog life as much as it is for us humans. We stimulate them, encourage them in playing together and get to bond with each other because the sense of belonging to a pack is again fundamental for their happiness."
 
   return (
     <>
       <Wrapper>
         <Text>
-          <h1>This are our services</h1>
+          <h1>Services</h1>
         </Text>
         <Text align="justify">
           <p>{ ourServices }</p>

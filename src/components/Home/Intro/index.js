@@ -9,8 +9,8 @@ const Intro = () => {
     <Wrapper>
       <Text>
         <h1>About us</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque in leo pharetra iaculis quis eu nulla. Integer sed leo pellentesque, auctor orci quis, dapibus est. Nam sodales dui ac fringilla posuere. Aliquam arcu mi, consectetur vel volutpat vitae, hendrerit ut metus.</p>
-        <p>Sed nec pharetra magna. Quisque molestie efficitur urna, quis convallis nibh auctor at. Nam sodales dui ac fringilla posuere. Aliquam arcu mi, consectetur vel volutpat vitae, hendrerit ut metus. Vivamus risus purus, egestas at nunc vitae, venenatis pellentesque tellus. Donec at vestibulum tellus, vel pretium massa. Nam luctus molestie purus. Nam egestas ante eget enim ornare luctus. Duis sagittis eros quis ipsum faucibus lobortis. Nunc lobortis laoreet sem, vel vehicula tortor vehicula id. Curabitur a pellentesque nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+        <p>We like to think our Love for dogs as the perfect example of unconditional affection and we firmly believe these clever creatures teach us humans more lessons then we realise, everyday! They deserve the best. That’s why we are committed to take great care of the dogs we look after.</p>
+        <p>We enjoy watching them grow from day to day, because they are your and our best friends. We spend our own day to day lives in their beautiful company and we feel privileged for that. Sharing good and bad weather, relax and play time, always in a safe environment. It’s impressing to see how friendships among them get strong and as sociable animals, for their own well-being, just like us, they need to create bonds and be part of a community/pack. We love what we do.</p>
       </Text>
       <Btn>
           <Button to="/about" name="Know our story" link="true"/>

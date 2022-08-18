@@ -23,7 +23,7 @@ const Slider = () => {
     <Container>
       <TextBox>
         <Text dark={"true"}>
-          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae neque in leo pharetra iaculis quis eu nulla. Integer sed leo pellentesque, auctor orci quis, dapibus est.</h3>
+          <h1>It must be love</h1>
         </Text>
       </TextBox>
       <Logo>

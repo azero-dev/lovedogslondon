@@ -69,4 +69,7 @@ export const InfoText = styled.div`
   top: 5px;
   right: 10px;
   z-index: 201;
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `
