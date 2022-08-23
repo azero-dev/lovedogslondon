@@ -3,11 +3,12 @@ module.exports = {
     title: `Lovedogs London`,
     description: `Dog Walking services in West London`,
     author: `Fran Rodriguez <fran.rodriguez@inferente.com>`,
-    siteUrl: `https://inferente.com/`,
+    siteUrl: `https://lovedogs.london/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-image`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -36,12 +37,18 @@ module.exports = {
         path: `${__dirname}/src/images/SocialMedia`,
       },
     },
-    
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `Gallery`,
         path: `${__dirname}/src/images/gallery`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `TAC`,
+        path: `${__dirname}/src/files`,
       },
     },
     {

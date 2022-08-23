@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { GatsbyImage } from 'gatsby-plugin-image'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 
-import { FooterArea, Logo } from './FooterElements'
+import { FooterArea, Logo, WebInfo } from './FooterElements'
 import Text from '../Text/index'
 import Button from '../Button/index'
 
@@ -34,6 +34,9 @@ const Footer = () => {
           </Text>
         </div>
       </FooterArea>
+      <WebInfo>
+        <Link to="privacyPolicy" >Privacy Policy</Link>
+      </WebInfo>
     </>
   )
 }

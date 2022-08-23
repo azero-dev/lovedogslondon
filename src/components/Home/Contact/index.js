@@ -9,7 +9,7 @@ import ContactForm from './ContactForm/index'
 
 const Contact = () => {
   // Query social media icons
-  const socialMedia = useStaticQuery(graphql`
+  const socialMediaIcons = useStaticQuery(graphql`
     query GetSocialMedia {
       allFile(filter: {relativeDirectory: {eq: "SocialMedia"}}) {
         edges {
@@ -24,7 +24,8 @@ const Contact = () => {
       }
     }  
   `)
-  const icons = socialMedia.allFile.edges
+  const icons = socialMediaIcons.allFile.edges
+  console.log(socialMediaIcons)
 
   // Reveal contact info
   const [reveal, setReveal] = useState(false)
@@ -52,7 +53,7 @@ const Contact = () => {
         </Text>
         {icons.map((elem, index) => {
           return (
-            <a href={elem.node.name === 'facebook' ? 'https://www.facebook.com/lovedogslondon' : 'https://instagram.com/lovedogslondonltd'} key={index}>
+            <a href={elem.node.name === 'faceboo' ? 'https://www.facebook.com/lovedogslondon' : 'https://instagram.com/lovedogslondonltd'} key={index}>
               <GatsbyImage image={elem.node.childImageSharp.gatsbyImageData} alt="" />
             </a>
           )

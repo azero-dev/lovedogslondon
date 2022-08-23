@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Text from "../Text/index"
 import Wrapper from "../Wrapper/index"
 import ServItem from './ServItem/index'
+import Download from "./Download"
 
 const ServicesComponent = () => {
   //Query images
@@ -53,6 +54,7 @@ const ServicesComponent = () => {
       { Object.values(servicesImg).map((elem, index) => {
         return (<ServItem items={elem} key={index} />)
       }) }
+      <Download />
     </>
   )
 }

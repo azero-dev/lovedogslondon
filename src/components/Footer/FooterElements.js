@@ -19,3 +19,13 @@ export const Logo = styled.div`
     height: auto;
   }
 `
+
+export const WebInfo = styled.div`
+  background: #311210;
+  width: 100%;
+  & a, a:visited {
+    margin: 0 0 0 1em;
+    font-size: .8em;
+    color: #848484;
+  }
+`

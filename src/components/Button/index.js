@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-
 import { ButtonWrap, Box } from './ButtonElements'
 
 const Button = ( props ) => {
@@ -29,7 +28,7 @@ export default Button
 
 // to = address to follow
 // name = text inside button
-// link = normal button or Link -> default: normal button
+// link = normal button or Link -> default: normal anchor link
 // align = align button -> default: 'center'
 // display = outer wrapper display -> default: block
 // secondary = secondary css -> default: primary

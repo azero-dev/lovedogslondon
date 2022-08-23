@@ -20,13 +20,13 @@ const AboutText = elem => {
         <>
           <Text align="justify">
             <p>When in our care, dogs have free time together and are able to socialise, sleep and play in a safe and clean environment. We believe that a ‘home away from home’ experience for your dog is the best way to look after them, making them feel as part of the family. They will be offered one of our comfortable beds or if you prefer, they can bring their own.</p>
-            <p>We have NO KENNELS, NO CAGES AND NO EXTERNAL ARRANGEMENTS. All dog walks take place in one of the local parks and are a minimum of one hour.</p>
+            <p>We have NO KENNELS, NO CAGES AND NO EXTERNAL ARRANGEMENTS. We are fully insured and all our walks take place in one of our local parks.</p>
             <p>We are happy to pick up and drop off your dog within our collection area. Love Dogs can tailor walks to your dog‘s needs: we take care of all dog breeds, from puppies going on their first walk to more mature dogs that might need slower walks.</p>
           </Text>
           <Highlight>
             <Text dark="true" align="justify" >
               <p>London free collection:</p>
-              <p>Kensington, Chelsea, Notting Hill, Bayswater, Ladbroke Grove, Holland Park, Earls Court, South Kensington, Kensal Rise, Belgravia Shepherds Bush, Fulham, Chiswick, Hammersmith, Maida Vale, Kightbridge, West Kensington, Regent's Park, Edgwere Road, West London, Mayfair, St Jhon's Wood,W2, W4, W6, W8, W9, W10, W11, W12, W14, SW1, SW3, SW5, SW6, SW7, SW10, NW1, NW5, NW6, NW10.</p>
+              <p>Kensington, Notting Hill, Bayswater, Ladbroke Grove, Holland Park, St.Jhon’s Wood, Queen’s Park, Maida Vale, Paddington, Kensal Rise, Knightsbridge, West Kensington, Edgware Road.</p>
             </Text>
           </Highlight>
         </>

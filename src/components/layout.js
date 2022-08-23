@@ -25,6 +25,7 @@ const Layout = ({ children }) => {
   return (
     <MyContext.Provider value={isShrunk}>
       <Body inScroll={isShrunk}>
+        <script data-goatcounter="https://whoin.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
         <Header />
         <HeaderHelper />
         <Main>{children}</Main>
